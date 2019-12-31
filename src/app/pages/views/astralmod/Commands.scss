@@ -1,0 +1,98 @@
+.view-commands, .view-commands-user {
+  background-image: linear-gradient(78deg, #30a33a 0%, rgb(121, 247, 104) 100%);
+}
+
+.commands-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -8em;
+}
+
+.commands-text {
+  &-container {
+    opacity: 0;
+    animation: fadeInAndBounceDown 0.5s 3s forwards;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 1em;
+  }
+
+  &-justbefore {
+    position: relative;
+    top: 175px;
+    opacity: 0;
+    animation: fadeIn 0.3s 1.2s forwards;
+  }
+
+  &-mention {
+    font-size: 50px;
+  }
+
+  &-href {
+    color: rgb(243, 243, 243);
+    background-color: rgba(185, 36, 153, 0.432);
+    padding: 4px;
+    position: relative;
+    top: 1em;
+  }
+
+  &-subtext {
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    font-size: 24px;
+  }
+
+  &-header {
+    opacity: 0;
+    font-size: 72px;
+    font-family: 'DM Sans', sans-serif;
+    animation: fadeInAndBounceDown 1s 0.2s forwards;
+  }
+
+  &-again {
+    font-size: 14px;
+  }
+}
+
+.nickname-mention {
+  background-color: rgba(202, 202, 202, 0.6);
+}
+
+.detailed-command-usage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    font-family: 'Bungee', sans-serif;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  table {
+    background-color: #212121;
+    display: block;
+    white-space: pre-wrap;
+    width: 305px;
+    text-align: left;
+    padding: 1em;
+    font-size: 14px;
+
+    > thead > tr > th {
+      padding-right: 4em;
+      text-align: left;
+      font-size: 18px;
+      font-family: 'DM Sans', sans-serif;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    > tbody > tr > td {
+      font-family: monospace;
+    }
+  }
+}

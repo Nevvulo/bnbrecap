@@ -1,0 +1,76 @@
+.view-credits {
+  background-color: rgb(144, 99, 196);
+}
+
+@keyframes creditsResolveAnimation {
+  to {
+    transform: scale(0.6) translate(-0%, -30%);
+  }
+}
+
+.credits {
+  &-header {
+    display: flex;
+    font-size: 72px;
+    font-weight: 800;
+    font-family: 'DM Sans', cursive;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    animation: creditsResolveAnimation 0.5s 1.25s forwards;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    margin-top: 300px;
+  }
+
+  &-footer {
+    margin-bottom: 4em;
+  }
+
+  &-text {
+    opacity: 0;
+    animation: fadeIn 1s 1.6s forwards;
+  }
+}
+
+.special-thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &-link {
+    color: rgb(249, 137, 198);
+  }
+
+  > div > img {
+    border-radius: 360px;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    margin-left: 10%;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    & > div > h4 {
+      margin-top: 0;
+    }
+
+    & > div > .mention {
+      font-size: 36px;
+      color: #89BCF9;
+    }
+  }
+}

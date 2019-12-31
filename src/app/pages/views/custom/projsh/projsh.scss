@@ -1,0 +1,29 @@
+.view-projsh {
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+}
+
+.projsh-text {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0;
+    animation: fadeIn 1s 2.2s forwards;
+    padding: 4em;
+  }
+
+  &-header {
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+
+  &-subtext {
+    font-size: 45px;
+    font-weight: 500;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+}

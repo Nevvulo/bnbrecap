@@ -1,0 +1,68 @@
+.view-messages-total, .view-user-messages {
+  background-image: linear-gradient( 109.7deg,  rgba(101,204,184,1) 12.9%, rgba(109,236,185,1) 101.5% );
+}
+
+.view-container {
+  padding: 1em;
+  padding-left: 0;
+}
+
+header.intro-header {
+  position: relative;
+  font-size: 2.5em;
+  padding: 1em;
+  
+  div {
+    font-family: 'Baloo Bhai', cursive;
+  }
+}
+
+.statistics-glow {
+  border-radius: 15px;
+  opacity: 0.8;
+  background: linear-gradient(to right, rgb(84, 228, 137), #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(14px);
+  -webkit-filter: blur(14px);
+  z-index: 0;
+  top: 4px;
+  left: 4px;
+}
+
+.statistics-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2em;
+  margin-left: 2em;
+  margin-bottom: -2em;
+  height: auto;
+  animation: 0.25s fadeIn 0s;
+
+  &-subtext {
+    position: relative;
+    border-radius: 4px;
+    top: -100px;
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(84, 228, 137), #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(84, 228, 137), #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 110%;
+    padding-left: 8px;
+    z-index: 0;
+
+    span {
+      opacity: 1 !important;
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+  }
+}
+
+.main-statistic-number {
+  font-family: 'Bungee', sans-serif;
+  font-size: 4em;
+  margin-bottom: -2em;
+  height: auto;
+  text-shadow: 1px 1px 4px black;
+}

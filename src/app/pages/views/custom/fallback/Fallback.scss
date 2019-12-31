@@ -1,0 +1,36 @@
+.view-fallback {
+  background-image: linear-gradient(90deg, rgb(60, 68, 168) 0%, rgb(31, 28, 207) 100%);
+}
+
+.fallback-avatar {
+  margin-left: 0.5em;
+}
+
+.fallback-text {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0;
+    animation: fadeIn 1s 2.2s forwards;
+    padding: 4em;
+  }
+
+  &-header {
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Viga', sans-serif;
+  }
+
+  &-subtext {
+    font-size: 45px;
+    font-weight: 500;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+
+  &-subsubtext {
+    font-size: 18px;
+  }
+}

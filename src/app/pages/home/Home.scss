@@ -1,0 +1,153 @@
+.home {
+  background: rgb(96,122,210);
+  background: radial-gradient(circle, rgba(96,122,210,1) 0%, rgba(15,23,75,1) 100%);
+  background-size: 200% auto;
+  overflow: hidden;
+  overflow-y: visible;
+  margin: 0;
+}
+
+div {
+  color: white;
+}
+
+.btn-discord {
+  background-image: linear-gradient(to right, #6190E8 0%, #A7BFE8 51%, #6190E8 100%);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  margin-top: 2em;
+  font-weight: 700;
+  font-size: 20px;
+  width: 240px;
+  display: block;
+  margin-left: 10%;
+}
+
+.recap-actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions-subtext {
+  position: relative;
+  top: 2px;
+  margin-left: 10%;
+  font-weight: 500;
+}
+
+.begin-recap-section {
+  padding: 4em;
+  padding-left: 0em;
+  padding-right: 12em;
+  display: flex;
+  flex: 1 0;
+  margin: 0;
+  flex-direction: row;
+}
+
+.divider {
+  border: 0.4px solid rgb(185, 185, 185);
+  margin: 2em;
+  margin-left: 0;
+  margin-top: 1em;
+}
+
+.recap-ayir-text {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.recap-section-top {
+  opacity: 1;
+  position: absolute;
+  font-size: 48px;
+  left: 0;
+  top: 25%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  animation: 0.7s beginAtMiddleFlyToTop 2.4s forwards cubic-bezier(.15,.97,.94,.97);
+  transition: font-size 0.66s;
+}
+
+.begin-recap-section {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: 0.5s fadeInFromTop 2.5s forwards;
+  margin-top: 16em;
+  
+  &-text {
+    display: flex;
+    flex: 1 0;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+  }
+  
+  &-summary {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 3em;
+    background-color: grey;
+    padding: 0.5em;
+    opacity: 0.8;
+
+    &-left {
+      width: 100%;
+      background-color: #764eb9;
+      animation: 2s slideInFromLeft 2.3s forwards;
+    }
+
+    &-right {
+      text-align: right;
+      padding-right: 2em;
+      width: 100%;
+      background-color: #9575cd;
+      animation: 2s slideInFromRight 2.3s forwards;
+    }
+  }
+
+  &-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+  }
+
+  &-subheader {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -8px;
+  }
+}
+
+.begin-recap-bnb-img {
+  margin-left: 20%;
+  width: 127px;
+  height: 127px;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px black;
+}
+
+.log-in-discord {
+  flex-direction: column;
+  margin-left: 8em;
+}
+
+.filter-check {
+  flex-direction: row;
+  margin-left: 4em;
+  position: relative;
+  top: 4em;
+}

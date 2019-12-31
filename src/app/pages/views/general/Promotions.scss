@@ -1,0 +1,48 @@
+.view-promotions {
+  background-image: linear-gradient(78deg, rgb(152, 58, 180) 0%, rgb(247, 104, 183) 100%);
+}
+
+.promotions-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+}
+
+.promotions-text {
+  &-container {
+    opacity: 0;
+    animation: fadeInAndBounceDown 0.5s 1.5s forwards;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 1em;
+  }
+
+  &-mention {
+    background-color: rgba(85, 85, 85, 0.432);
+  }
+
+  &-href {
+    color: rgb(243, 243, 243);
+    background-color: rgba(112, 112, 112, 0.432);
+    padding: 4px;
+    position: relative;
+    top: 1em;
+  }
+
+  &-subtext {
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    font-size: 34px;
+    color: #f0f0f0;
+  }
+
+  &-header {
+    opacity: 0;
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInAndBounceDown 1s 0.2s forwards
+  }
+}

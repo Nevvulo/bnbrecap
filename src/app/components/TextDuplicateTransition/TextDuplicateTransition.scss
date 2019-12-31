@@ -1,0 +1,16 @@
+.tdt-text-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  animation: fadeOut 1s 2s forwards;
+}
+
+.tdt-text-content {
+  font-weight: 500;
+  font-family: 'Viga', sans-serif;
+  opacity: 1;
+
+  div {
+    font-size: 72px;
+  }
+}

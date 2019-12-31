@@ -1,0 +1,115 @@
+.discord-message {
+  display: flex;
+  flex-direction: row;
+  background-color: #36393f;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  font-family: 'Helvetica', sans-serif;
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+  &-name-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+  &-content {
+    align-self: flex-start;
+    text-align: left;
+    color: #dcddde;
+  }
+
+  &-avatar {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+
+    img {
+      border-radius: 360px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-username {
+    font-size: 1rem;
+    line-height: 1.375em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &-timestamp {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #72767d;
+    margin-left: .3rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  &-reactions-container {
+    margin-bottom: 8px;
+  }
+
+  &-reactions {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-reactions-box {
+    border-radius: 3px;
+    margin: 2px;
+    background: hsla(0, 0%, 100%, 0.06);
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-reactions-inner {
+    padding: 0px 6px;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      .discord-message-reaction-count {
+        color: white;
+      }
+    }
+  }
+
+  &-reaction-count {
+    font-size: 0.875rem;
+    font-weight: 500;
+    vertical-align: baseline;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    text-align: center;
+    color: #72767d;
+  }
+}
+
+.emoji {
+  width: 1rem;
+  height: 1rem;
+  margin: 3px 0;
+  min-width: auto;
+  min-height: auto;
+}
+
+.mention {
+  color: #7289da;
+  background-color: rgba(114,137,218,.1);
+}

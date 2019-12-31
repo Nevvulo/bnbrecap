@@ -1,0 +1,49 @@
+.view-nickname {
+  background-image: linear-gradient(78deg, #f4511e 0%, rgb(247, 125, 104) 100%);
+}
+
+.nickname-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+}
+
+.nickname-text {
+  &-container {
+    opacity: 0;
+    animation: fadeInAndBounceDown 0.5s 2.7s forwards;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 1em;
+  }
+
+  &-mention {
+    font-size: 50px;
+  }
+
+  &-href {
+    color: rgb(243, 243, 243);
+    background-color: rgba(185, 36, 153, 0.432);
+    padding: 4px;
+    position: relative;
+    top: 1em;
+  }
+
+  &-subtext {
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    font-size: 24px;
+  }
+
+  &-header {
+    opacity: 0;
+    font-size: 72px;
+    font-family: 'DM Sans', sans-serif;
+    animation: fadeInAndBounceDown 1s 2.2s forwards
+  }
+}
+
+.nickname-mention {
+  background-color: rgba(202, 202, 202, 0.6);
+}

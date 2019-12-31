@@ -1,0 +1,64 @@
+.view-most-pinned {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+@keyframes fadeOutAndZoomPinnedIntro {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(200px);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.5) translateY(150px);
+  }
+}
+
+.pinned-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+}
+
+.pinned-text {
+  &-container {
+    opacity: 0;
+    animation: fadeInAndBounceDown 0.5s 3.5s forwards;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 1em;
+
+    > .discord-message {
+      margin-left: 4em;
+      margin-right: 4em;
+    }
+  }
+
+  &-href {
+    color: rgb(243, 243, 243);
+    background-color: rgba(185, 36, 153, 0.432);
+    padding: 4px;
+    position: relative;
+    top: 1em;
+  }
+
+  &-subtext {
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    font-size: 24px;
+  }
+
+  &-header {
+    opacity: 0;
+    font-size: 72px;
+    font-family: 'DM Sans', sans-serif;
+    animation: fadeInAndBounceDown 1s 2.2s forwards
+  }
+}
+
+.mention {
+  margin-left: 4px;
+  margin-right: 4px;
+}

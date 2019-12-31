@@ -1,0 +1,55 @@
+.view-attachments {
+  background-image: linear-gradient(78deg, rgb(123, 180, 58) 0%, rgb(221, 247, 104) 100%);
+}
+
+@keyframes fadeOutAndZoomPinnedIntro {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(200px);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.5) translateY(150px);
+  }
+}
+
+.attachments-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+}
+
+.attachments-text {
+  &-container {
+    opacity: 0;
+    animation: fadeInAndBounceDown 0.5s 1.5s forwards;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-top: 1em;
+  }
+
+  &-href {
+    color: rgb(243, 243, 243);
+    background-color: rgba(185, 36, 153, 0.432);
+    padding: 4px;
+    position: relative;
+    top: 1em;
+  }
+
+  &-subtext {
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: -1em;
+    font-size: 34px;
+    color: #f0f0f0;
+  }
+
+  &-header {
+    opacity: 0;
+    font-size: 72px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInAndBounceDown 1s 0.2s forwards
+  }
+}

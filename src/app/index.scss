@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Baloo|Baloo+Bhai|Bungee|DM+Sans|Viga&display=swap');
+
+@font-face {
+  font-family: 'Contemporary';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Contemporary'), local('Contemporary-Regular'), url('https://vicr123.com/typeface/Contemporary-Regular.ttf');
+}
+
+div {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.avatar {
+  border-radius: 360px;
+}
+
+.scroll-suggest {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.5s 0s forwards;
+}
+
+.center-page {
+  position: absolute;
+  left: 0; 
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 14px;
+
+  &-thumb {
+    background-clip: padding-box;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #505050;
+  }
+
+  &-track-piece {
+    background-color: #1d1d1d;
+    border: 3px solid #292929;
+    border-radius: 7px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.disable-selection {
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+::selection {
+  background-color: rgb(65, 85, 150);
+}
+
+.btn {
+  padding: 12px;
+  margin: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  background-color: #7e7e7e;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+
+  &:hover {
+    transition: all 0.2s;
+    -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
+table {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.view {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes jumpIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+
+.view-container {
+  opacity: 0;
+  animation: jumpIn 300ms 0.07s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeInAndBounceDown {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(200px);
+  }
+}
+
+@keyframes fadeOutAndZoom {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+
+  to {
+    transform: translate(0%);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(calc(100vw - 100%))
+  }
+}
+
+@keyframes beginAtMiddleFlyToTop {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.7) translate(-15%, -90%);
+  }
+}
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.checkbox {
+  color: white;
+}
+
+.filter {
+  filter: blur(3px);
+}

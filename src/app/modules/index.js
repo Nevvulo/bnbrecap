@@ -1,0 +1,1 @@
+export { default as spellSentenceByWord } from './spellSentenceByWord.js';

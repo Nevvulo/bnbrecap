@@ -1,0 +1,107 @@
+.text-jump-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// 50% (spaced out) (0.2) (shrinking)
+// 75% (0.2) (shrinking)
+// 100% (growing)
+// 200% (shrinking)
+// transition to 100% and finish
+
+@keyframes changeLetterSpacing {
+  from {
+    letter-spacing: 100px;
+  }
+
+  to {
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes growTo75 {
+  from {
+    transform: scale(0.75);
+  }
+
+  to {
+    transform: scale(0.65);
+  }
+}
+
+@keyframes growTo100 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes growTo200 {
+  0% {
+    transform: scale(1.8);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes growTo300 {
+  0% {
+    transform: scale(4);
+  }
+
+  100% {
+    transform: scale(1.75);
+  }
+}
+
+@keyframes enableDropShadow {
+  0% {
+    text-shadow: 0px 0px 0px black;
+  }
+
+  100% {
+    text-shadow: 1px 2px 3px black;
+  }
+}
+
+// Oh boy.
+.text-jump-content {
+  top: -2em;
+  font-weight: 500;
+  word-wrap: wrap;
+  font-family: 'Viga', sans-serif;
+  position: relative;
+  opacity: 1;
+  letter-spacing: 50px;
+  font-size: 100px;
+  transform: scale(0.5);
+  animation: changeLetterSpacing 0s 0.2s forwards, growTo75 0.3s forwards, growTo100 0.3s 0.2s forwards, 
+  growTo200 0.3s 0.4s, growTo300 0.6s 0.6s cubic-bezier(.89,.12,.74,.47) forwards, enableDropShadow 0s 1.23s forwards;
+}
+
+@media only screen and (max-width: 1100px) {
+  .text-jump-content {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-jump-content {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text-jump-content {
+    font-size: 30px;
+  }
+}

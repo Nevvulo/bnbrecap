@@ -1,0 +1,22 @@
+.ptl-text-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  animation: zoomInParticleText 1s 2s forwards;
+}
+
+@keyframes zoomInParticleText {
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(4);
+  }
+}
+
+.ptl-text-content {
+  font-weight: 500;
+  font-family: 'Viga', sans-serif;
+  opacity: 1;
+}

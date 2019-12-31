@@ -1,0 +1,41 @@
+.view-squid-grill {
+  background: rgb(165,226,224);
+  background: linear-gradient(90deg, rgba(165,226,224,1) 0%, rgba(38,170,212,1) 100%);
+}
+
+@keyframes squidGrillResolveAnimation {
+  to {
+    transform: scale(0.6) translate(-20%, -30%);
+  }
+}
+
+.squid-grill {
+  &-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  &-header {
+    animation: squidGrillResolveAnimation 0.5s 1.25s forwards;
+  }
+
+  &-text {
+    margin-top: 250px;
+    margin-left: 250px;
+    opacity: 0;
+    animation: fadeIn 0.5s 1.25s forwards;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &-footer {
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+.view-cylex {
+  background: rgb(165,226,224);
+  background: linear-gradient(90deg, rgb(50, 70, 163) 0%, rgb(20, 77, 161) 100%);
+}
+
+@keyframes cylexResolveAnimation {
+  to {
+    transform: scale(0.6) translate(-0%, -30%);
+  }
+}
+
+.cylex {
+  &-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  &-header {
+    animation: cylexResolveAnimation 0.5s 1.25s forwards;
+  }
+
+  &-text {
+    margin-top: 250px;
+    opacity: 0;
+    animation: fadeIn 0.5s 1.25s forwards;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    padding: 4em;
+    padding-top: 0;
+  }
+
+  &-footer {
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,28 @@
+.view-vrabbers {
+  background: linear-gradient(90deg, rgba(43, 255, 0, 0.63), rgb(51, 153, 65));
+}
+
+.vrabbers-text {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0;
+    animation: fadeIn 1s 2.2s forwards;
+    padding: 2em;
+  }
+
+  &-header {
+    font-size: 72px;
+    font-weight: 700;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+  }
+}

@@ -1,0 +1,44 @@
+.view-nitro {
+  background: rgb(165,226,224);
+  background: linear-gradient(90deg, rgba(165,226,224,1) 0%, rgba(38,170,212,1) 100%);
+}
+
+@keyframes nitroResolveAnimation {
+  to {
+    transform: scale(1) translate(0%, -10%);
+  }
+}
+
+.nitro {
+  &-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  &-header {
+    animation: nitroResolveAnimation 0.5s 1.25s forwards;
+  }
+
+  &-text {
+    margin-top: 250px;
+    opacity: 0;
+    animation: fadeIn 0.5s 1.25s forwards;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &-btn {
+    margin-left: 45%;
+  }
+
+  &-footer {
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+}

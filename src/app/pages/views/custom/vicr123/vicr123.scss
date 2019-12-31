@@ -1,0 +1,37 @@
+.view-vicr123 {
+  background: linear-gradient(90deg, rgb(0, 100, 255), rgb(0, 200, 255));
+}
+
+.vicr123-text {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0;
+    animation: fadeIn 1s 2.2s forwards;
+    padding: 2em;
+  }
+
+  &-header {
+    font-size: 72px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  &-subtext {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Contemporary', sans-serif;
+  }
+}
+
+.vicr123-smile {
+  font-size: 168px;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  left: -200px;
+  top: 200px;
+}

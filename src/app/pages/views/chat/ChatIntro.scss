@@ -1,0 +1,16 @@
+.view-chat-intro {
+  background-color: rgb(108, 143, 101);
+}
+
+.chat-header {
+  display: flex;
+  font-size: 128px;
+  font-weight: 700;
+  font-family: 'Bungee', cursive;
+  justify-content: center;
+  align-content: center;
+  transform: translateY(100px);
+  opacity: 0;
+  position: relative;
+  animation: fadeInAndBounceDown 1s 2.2s forwards;
+}
