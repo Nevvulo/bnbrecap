@@ -21,7 +21,7 @@ class Navbar extends Component {
               <Icon url={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} className='navbar-user-icon' width='32' height='32' />
               <div className='navbar-user-text'>
                 <div className='navbar-user-username'>{user.username}</div>
-                <a href='/signout' className='navbar-user-signout'>Sign out</a>
+                <a href='/' onClick={() => { localStorage.removeItem('user') }} className='navbar-user-signout'>Sign out</a>
               </div>
             </div>
           </div>

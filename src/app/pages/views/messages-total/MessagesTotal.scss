@@ -36,13 +36,13 @@ header.intro-header {
   font-size: 2em;
   margin-left: 2em;
   margin-bottom: -2em;
-  height: auto;
+  margin-top: 2em;
+  height: 120px;
   animation: 0.25s fadeIn 0s;
 
   &-subtext {
     position: relative;
     border-radius: 4px;
-    top: -100px;
     background: #1D976C;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgb(84, 228, 137), #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, rgb(84, 228, 137), #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -63,6 +63,7 @@ header.intro-header {
   font-family: 'Bungee', sans-serif;
   font-size: 4em;
   margin-bottom: -2em;
-  height: auto;
+  line-height: 150px;
+  height: 120px;
   text-shadow: 1px 1px 4px black;
 }
