@@ -29,7 +29,7 @@ class MostPinned extends Component {
 
             <DiscordMessage 
             username='lily🌈💕' 
-            avatar={<Icon url='https://cdn.discordapp.com/avatars/109467433558896640/50782387bf0d2bae171f03685aa82048.png?size=2048'></Icon>}
+            avatar={<Icon url='https://cdn.discordapp.com/avatars/109467433558896640/726074640a531fc02cefcfaa1af944f7.png?size=2048'></Icon>}
             reactions={13}>
               idk but that does not look like a very efficient d<span className={filter ? 'filter' : ''}>ildo</span>
             </DiscordMessage>
