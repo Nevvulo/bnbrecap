@@ -34,7 +34,7 @@ class MostPinned extends Component {
               idk but that does not look like a very efficient d<span className={filter ? 'filter' : ''}>ildo</span>
             </DiscordMessage>
 
-            <a className='pinned-text-href' href='https://massive-legend.nevulo.xyz/RfqJobdE.png'>Messages that were pinned by the author of the message are not counted.</a>
+            <a className='pinned-text-href' target="_blank" rel="noopener noreferrer" href='https://massive-legend.nevulo.xyz/RfqJobdE.png'>Messages that were pinned by the author of the message are not counted.</a>
           </div>
         </div>
       </div>     
