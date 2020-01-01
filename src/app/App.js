@@ -48,7 +48,7 @@ if (window.user) {
   }
 }
 
-const id = window.user ? window.user.id : 0;
+const id = window.user ? window.user.id : 1;
 const CUSTOM_IDS = [
   '189412734050238464', '278805875978928128', '384454726512672768',
   '250726367849611285', '241299743869894667', '199958849094942721',
