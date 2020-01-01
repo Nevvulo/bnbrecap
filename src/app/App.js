@@ -13,6 +13,10 @@ const DiscordOauth2 = require("discord-oauth2");
 const oauth = new DiscordOauth2();
 const secrets = require('./../secrets.json');
 
+if (!Error.captureStackTrace) {
+  Error.captureStackTrace = () => true;
+}
+
 /* Search query data
 * Name: Every single message in every channel accessible by all roles
 * during: 2019 in: general in: off-topic in: techgeeks in: sharing-is-caring in: bot in: epic-gamers in: minecraft in: the-sims in: switch
@@ -186,6 +190,9 @@ window.routeHandler = routeHandler;
 let change = 0;
 let scrollingDisabled = false;
 document.addEventListener('wheel', routeHandler)
+document.addEventListener('keydown', (e) => {
+
+})
 
 const ACCESS_TOKEN = window.location.search.split('access_token=')[1]
 if (ACCESS_TOKEN && !window.user) {
