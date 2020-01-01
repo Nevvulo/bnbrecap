@@ -26,7 +26,7 @@ class View extends Component {
           <div className='scroll-container'>
             {prev && <Link to={`/${prev.path}`} className='btn scroll-btn-prev'>PREV</Link>}
             <div className='scroll-suggest'>
-              Scroll down to see more pages!
+              Scroll down or use the arrow keys to see more pages!
             </div>
             {next && <Link to={`/${next.path}`} className='btn scroll-btn-next'>NEXT</Link>}
           </div>

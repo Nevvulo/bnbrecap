@@ -191,7 +191,11 @@ let change = 0;
 let scrollingDisabled = false;
 document.addEventListener('wheel', routeHandler)
 document.addEventListener('keydown', (e) => {
-
+  if (e.keyCode === 38) {
+    window.routeHandler({ deltaY: -2 })
+  } else if (e.keyCode === 40) {
+    window.routeHandler({ deltaY: 2 })
+  }
 })
 
 const ACCESS_TOKEN = window.location.search.split('access_token=')[1]
