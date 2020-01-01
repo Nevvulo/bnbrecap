@@ -49,7 +49,12 @@ if (window.user) {
 }
 
 const id = window.user ? window.user.id : 0;
-
+const CUSTOM_IDS = [
+  '189412734050238464', '278805875978928128', '384454726512672768',
+  '250726367849611285', '241299743869894667', '199958849094942721',
+  '204820571656028161', '242775871059001344', '191290329985581069',
+  '279378942400528385', '209393457574313984', '210794545015685121'
+]
 const ROUTES = [
   { name: 'Home', class: 'home', component: Home, path: '', noView: true },
 
@@ -83,7 +88,7 @@ const ROUTES = [
   { name: 'Vrabbers', class: 'vrabbers', component: Vrabbers, path: 'custom-vrabbers', id: '209393457574313984' },
   { name: 'Ashifter', class: 'ashifter', component: Ashifter, path: 'custom-ashifter', id: '210794545015685121' },
 
-  { name: 'Fallback', class: 'fallback', component: Fallback, path: 'custom', id },
+  { name: 'Fallback', class: 'fallback', component: Fallback, path: 'custom', id: CUSTOM_IDS.includes(id) ? 1 : id },
 
   { name: 'Nitro', class: 'nitro', component: Nitro, path: 'nitro', id: secrets.DISCORD_NITRO_CODES[window.user ? window.user.id : 0] ? id : 1 },
 
