@@ -15,7 +15,7 @@ class Promotions extends Component {
               with an ASTONISHING <CountUp end={1} delay={1.8} duration={1.6}></CountUp> PROMOTIONS!!!
             </div>
 
-            {window.user && window.user.id !== '191290329985581069' && 
+            {window.user && window.user.id === '191290329985581069' && 
               <h2>thanks for letting me take your role aren <span role='img' aria-label='heart'>❤️</span></h2>
             }
           </div>
