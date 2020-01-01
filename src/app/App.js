@@ -7,7 +7,7 @@ import './App.css';
 import { MessagesIntro, MessagesTotal, View, UserMessages,
   MostPinned, UserPinned, Nickname, Commands, CommandsUser, AstralModIntro, ChatIntro, Attachments, Swears, 
   vicr123, SquidGrill, reflectronic, projsh, NTF, Jelle, Craig, Alee, Fallback, Nitro,
-  Aren, cylex, Vrabbers, Promotions } from './pages/views';
+  Aren, cylex, Vrabbers, Ashifter, Promotions } from './pages/views';
 
 const DiscordOauth2 = require("discord-oauth2");
 const oauth = new DiscordOauth2();
@@ -29,12 +29,6 @@ const secrets = require('./../secrets.json');
 
 /*
 TODO: Finalized List of Views (in order):
-* Total Messages
-✅ - * Total messages in 2019
-🚕 - * Use Discord OAuth to determine member rank and show regular 
-    or veteran stats, otherwise just show total messages for all roles
-
-
 * Personalized
 * * Swing
 - - 89 mentions of "furry"
@@ -87,6 +81,7 @@ const ROUTES = [
   { name: 'Aren', class: 'aren', component: Aren, path: 'custom-aren', id: '191290329985581069' },
   { name: 'cylex', class: 'cylex', component: cylex, path: 'custom-cylex', id: '279378942400528385' },
   { name: 'Vrabbers', class: 'vrabbers', component: Vrabbers, path: 'custom-vrabbers', id: '209393457574313984' },
+  { name: 'Ashifter', class: 'ashifter', component: Ashifter, path: 'custom-ashifter', id: '210794545015685121' },
 
   { name: 'Fallback', class: 'fallback', component: Fallback, path: 'custom', id },
 
@@ -131,19 +126,23 @@ function App() {
   )
 }
 
-const routeHandler = (event) => {
+const routeHandler = (event, returnString = false) => {
   const list = ROUTES.filter(e => e.id ? !!window.user : true).filter(e => !e.id || e.id === id)
   const direction = event ? (event.deltaY > 1 ? 1 : -1) : 1;
   change++;
 
   if (change && !scrollingDisabled) {
-    change = 0;
-    scrollingDisabled = true;
+    if (!returnString) {
+      change = 0;
+      scrollingDisabled = true;
+    }
+    
     const position = list.indexOf(CURRENT_ROUTE) === -1 ? 0 : list.indexOf(CURRENT_ROUTE);
 
     if (list[position + direction]) {
       let previous = CURRENT_ROUTE;
       CURRENT_ROUTE = list[position + direction];
+      let TEMP_CURRENT_ROUTE = CURRENT_ROUTE;
       if (previous === CURRENT_ROUTE) {
         return;
       }
@@ -152,13 +151,18 @@ const routeHandler = (event) => {
         if (CURRENT_ROUTE.id !== undefined && (CURRENT_ROUTE.id === null || CURRENT_ROUTE.id !== id)) {
           return routeHandler();
         }
+        if (returnString) {
+          // this is literllly so cooked but whatever
+          CURRENT_ROUTE = previous;
+          return TEMP_CURRENT_ROUTE;
+        }
         if (CURRENT_ROUTE.class.includes('intro')) {
           document.location.pathname = `/${CURRENT_ROUTE.path}`;
         } else {
-          document.body.classList.add('page-exit', 'page-exit-active')
+          document.body.classList.add('view-exit', 'view-exit-active')
           setTimeout(() => {
             document.location.pathname = `/${CURRENT_ROUTE.path}`;
-          }, 100);
+          }, 120);
         }
       }
     }

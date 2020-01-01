@@ -26,6 +26,7 @@ export { default as Alee } from './custom/alee/alee';
 export { default as Aren } from './custom/aren/aren';
 export { default as cylex } from './custom/cylex/cylex';
 export { default as Vrabbers } from './custom/Vrabbers/Vrabbers';
+export { default as Ashifter } from './custom/ashifter/ashifter';
 export { default as Fallback } from './custom/fallback/Fallback';
 export { default as View } from './view/View';
 

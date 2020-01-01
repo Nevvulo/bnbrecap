@@ -14,11 +14,11 @@ class Attachments extends Component {
           <div className='attachments-text-container'>
             <div className='attachments-text-subtext'>
               <span className='mention attachments-text-mention'>@vicr123</span>
-              with an incredible <CountUp end={6406} delay={1.8} duration={1.6}></CountUp> attachments
+              with an incredible <CountUp end={6406} separator=',' delay={1.8} duration={1.6}></CountUp> attachments
             </div>
 
             {data && window.user.id !== '199958849094942721' && 
-              <h2>You posted {data} attachments this year - not bad!</h2>
+              <h2>You posted {data.toLocaleString()} attachments this year - not bad!</h2>
             }
 
             <div className='attachments-special-mention'>

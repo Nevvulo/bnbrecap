@@ -149,5 +149,35 @@ div {
   flex-direction: row;
   margin-left: 4em;
   position: relative;
-  top: 4em;
+  top: 3.1em;
+}
+
+label input {
+  visibility: hidden;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+label span {
+  height: 20px;
+  width: 20px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  top: -2px;
+}
+
+[type=checkbox]:checked + span {
+  transition: all 0.2s;
+  background: rgb(255, 255, 255);
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
 }

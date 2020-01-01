@@ -16,7 +16,7 @@ class Swears extends Component {
             <div className='swears-text-subtext'>
               <span className='mention swears-text-mention'>@Squid Grill</span>
               <br></br>
-              <CountUp end={1537} delay={1.8} duration={1.6}></CountUp> mentions of "fuck", "shit" or "bitch"
+              <CountUp end={1537} separator=',' delay={1.8} duration={1.6}></CountUp> mentions of "fuck", "shit" or "bitch"
               <br></br>
               <code>
                 fuck: 762, shit: 766, bitch: 9

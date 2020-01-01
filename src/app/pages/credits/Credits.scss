@@ -33,6 +33,21 @@
     opacity: 0;
     animation: fadeIn 1s 1.6s forwards;
   }
+
+  &-back-btn {
+    border-radius: 12px;
+    width: 70px;
+    position: absolute;
+    left: 250px;
+    top: 50%;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+
+    &:visited {
+      color: white;
+    }
+  }
 }
 
 .special-thanks {

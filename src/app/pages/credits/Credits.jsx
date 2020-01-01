@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TextJumpTransition, Icon } from './../../components';
 import { spellSentenceByWord } from './../../modules';
 import './Credits.scss';
+import { Link } from 'react-router-dom';
 
 class Credits extends Component {
   render () {
@@ -11,6 +12,10 @@ class Credits extends Component {
         <div className='credits-text'>
           <div className='credits-subtext'>Thanks for joining us this year!</div>
           <div className='credits-footer'>You've made it to the end of this years recap.</div>
+
+          <Link to='/' className='btn credits-back-btn'>
+            &lsaquo;   Home
+          </Link>
 
           <div className='special-thanks center'>
             <div className='special-thanks-blake'>
@@ -32,6 +37,7 @@ class Credits extends Component {
             <br></br>
             <span>thanks to cameron for being cameron</span>
             <span>and thanks to you for looking at this recap</span>
+            <span>Have a happy new year!</span>
             <br></br>
             <br></br>
             <br></br>

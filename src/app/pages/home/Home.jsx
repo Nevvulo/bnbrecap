@@ -33,7 +33,11 @@ class Home extends Component {
               <div className='actions-subtext disable-selection'>{window.user ? 'Scroll down to see statistics!' : 'or scroll down to see general statistics!'}</div>
             </div>
             <div className='filter-check'>
-              <label className='checkbox'><input type="checkbox" checked={filter} onClick={() => { localStorage.setItem('filter', filter === undefined ? true : !filter); filter = !filter; }} /><span>Disable inappropriate content</span></label>
+              <label className='checkbox'>
+                <input type="checkbox" defaultValue={filter} onClick={() => { localStorage.setItem('filter', filter === undefined ? true : !filter); filter = !filter; }} />
+                <span></span>
+                <div>Disable {window.user && window.user.id === '278805875978928128' ? <b>unfortunate</b> : 'inappropriate'} content</div>
+              </label>
             </div>
           </div>
         </div>

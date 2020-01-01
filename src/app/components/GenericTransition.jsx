@@ -8,7 +8,7 @@ class GenericTransition extends Component {
         <CSSTransition
               timeout={300}
               in={true}
-              classNames='page'
+              classNames='view'
             >
           {React.cloneElement(this.props.children, { key: Math.random() * Math.random() })}
         </CSSTransition>

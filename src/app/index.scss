@@ -22,15 +22,6 @@ body {
   border-radius: 360px;
 }
 
-.scroll-suggest {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  font-weight: 600;
-  text-align: center;
-  animation: fadeIn 0.5s 0s forwards;
-}
-
 .center-page {
   position: absolute;
   left: 0; 
@@ -106,6 +97,45 @@ table {
 .view {
   width: 100vw;
   height: 100vh;
+}
+
+.scroll-btn {
+  &-next {
+    background-color: rgba(221, 0, 173, 0.452);
+  }
+
+  &-prev {
+    background-color: rgba(51, 51, 51, 0.452);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.5s 0s forwards;
+
+  & > .btn {
+    width: 50px;
+    height: 6px;
+    line-height: 6px;
+    text-align: center;
+    color: rgb(236, 236, 236);
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+  }
+}
+
+.scroll-suggest {
+  width: 250px;
+  position: relative;
 }
 
 @keyframes jumpIn {
@@ -225,29 +255,23 @@ table {
   }
 }
 
-.page {
-  position: absolute;
-  left: 15px;
-  right: 15px;
-}
-
-.page-enter {
+.view-enter {
   opacity: 0;
   transform: scale(1.1);
 }
 
-.page-enter-active {
+.view-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: opacity 300ms, transform 300ms;
 }
 
-.page-exit {
+.view-exit {
   opacity: 1;
   transform: scale(1);
 }
 
-.page-exit-active {
+.view-exit-active {
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;

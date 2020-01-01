@@ -23,7 +23,7 @@ class CommandsUser extends Component {
           <div className='commands-text-container'>
             <div className='commands-text-subtext'>
               <br></br>
-              <b><CountUp end={data.total} delay={3.2} duration={1.6}></CountUp></b> commands used this year with AstralMod
+              <b><CountUp end={data.total} separator=',' delay={3.2} duration={1.6}></CountUp></b> commands used this year with AstralMod
               <br></br>
               <div className='detailed-command-usage'>
                 <h2 className='detailed-command-usage-header'>Detailed Command Usage</h2>
