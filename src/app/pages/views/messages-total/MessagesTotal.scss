@@ -59,6 +59,13 @@ header.intro-header {
   }
 }
 
+.user-messages {
+  &-subtext {
+    position: relative;
+    top: -100px;
+  }
+}
+
 .main-statistic-number {
   font-family: 'Bungee', sans-serif;
   font-size: 4em;
