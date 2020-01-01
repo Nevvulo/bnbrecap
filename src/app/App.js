@@ -118,7 +118,6 @@ function App() {
             })}
             
             <Route path='/signout' component={Home} />
-            <Route path='*' component={Home} />
           </Switch>
       )}/>
       </div>
