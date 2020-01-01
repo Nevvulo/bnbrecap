@@ -114,7 +114,6 @@ export default {
     avatar: 'a71c0a23b68fed6b0063d170337abd19',
     id: '219988930592768000'
   },
-  '384713885783031808': { username: 'AdrUlb', avatar: null, id: '384713885783031808' },
   '275867508932608000': {
     username: 'NetwideRogue',
     avatar: '4818f63e21df99da7280d782b73444f4',
@@ -122,7 +121,7 @@ export default {
   },
   '305452175356723202': {
     username: 'juulpod',
-    avatar: '284183c28cdfefcf1c215ba5b48ac7ed',
+    avatar: 'a_7ec8d14785408c67951ac09a0db5d0b9',
     id: '305452175356723202'
   },
   '250726367849611285': {
@@ -175,7 +174,6 @@ export default {
     avatar: '468e45445b892b3a38ffad7d6054b896',
     id: '191290329985581069'
   },
-  '297201585090723841': { username: 'Raina', avatar: null, id: '297201585090723841' },
   '236430250219798528': {
     username: 'Lex',
     avatar: '2b083bdd2073ec21ec62c660d8885399',

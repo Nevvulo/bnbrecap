@@ -48,7 +48,7 @@ if (window.user) {
   }
 }
 
-const id = window.user ? window.user.id : null;
+const id = window.user ? window.user.id : 0;
 
 const ROUTES = [
   { name: 'Home', class: 'home', component: Home, path: '', noView: true },
@@ -85,7 +85,7 @@ const ROUTES = [
 
   { name: 'Fallback', class: 'fallback', component: Fallback, path: 'custom', id },
 
-  { name: 'Nitro', class: 'nitro', component: Nitro, path: 'nitro', id: secrets.DISCORD_NITRO_CODES[window.user ? window.user.id : 0] ? id : null },
+  { name: 'Nitro', class: 'nitro', component: Nitro, path: 'nitro', id: secrets.DISCORD_NITRO_CODES[window.user ? window.user.id : 0] ? id : 1 },
 
   { name: 'Credits', class: 'credits', component: Credits, path: 'credits', noView: true },
 ]
@@ -141,19 +141,22 @@ const routeHandler = (event, returnString = false) => {
     if (list[position + direction]) {
       let previous = CURRENT_ROUTE;
       CURRENT_ROUTE = list[position + direction];
-      let TEMP_CURRENT_ROUTE = CURRENT_ROUTE;
       if (previous === CURRENT_ROUTE) {
+        console.log('[ ROUTE ] Duplicate found')
         return;
       }
 
       if (CURRENT_ROUTE) {
-        if (CURRENT_ROUTE.id !== undefined && (CURRENT_ROUTE.id === null || CURRENT_ROUTE.id !== id)) {
-          return routeHandler();
+        if (CURRENT_ROUTE.id !== undefined && CURRENT_ROUTE.id !== id) {
+          if (CURRENT_ROUTE.id !== 0 && id) {
+            console.log('[ ROUTE ] ID based route hit but not authorized')
+            return routeHandler();
+          }
         }
         if (returnString) {
           // this is literllly so cooked but whatever
-          CURRENT_ROUTE = previous;
-          return TEMP_CURRENT_ROUTE;
+          console.log('[ ROUTE ] Next route is ', CURRENT_ROUTE)
+          return CURRENT_ROUTE;
         }
         if (CURRENT_ROUTE.class.includes('intro')) {
           document.location.pathname = `/${CURRENT_ROUTE.path}`;

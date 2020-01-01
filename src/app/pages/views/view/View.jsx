@@ -14,7 +14,8 @@ class View extends Component {
       }, 150);
     }
     
-    const next = window.routeHandler(null, true);
+    const next = window.routeHandler({ deltaY: 5 }, true);
+    const prev = window.routeHandler({ deltaY: -5 }, true);
 
     return (
       <GenericTransition>
@@ -23,7 +24,7 @@ class View extends Component {
           {this.props.children}
           {!this.props.className.includes('intro') && 
           <div className='scroll-container'>
-            <Link to className='btn scroll-btn-prev'>PREV</Link>
+            {prev && <Link to={`/${prev.path}`} className='btn scroll-btn-prev'>PREV</Link>}
             <div className='scroll-suggest'>
               Scroll down to see more pages!
             </div>

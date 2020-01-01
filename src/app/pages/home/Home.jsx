@@ -28,7 +28,7 @@ class Home extends Component {
           </div>
           <div className='recap-actions'>
             <div className='log-in-discord'>
-              <div onClick={() => window.location.replace('https://discordapp.com/api/oauth2/authorize?client_id=658006978022342656&redirect_uri=https%3A%2F%2F2019.bnbdiscord.net%3A3232%2Fapi%2Foauth&response_type=code&scope=identify')} 
+              <div onClick={() => window.location.replace('https://discordapp.com/api/oauth2/authorize?client_id=658006978022342656&redirect_uri=https%3A%2F%2F2019.bnbdiscord.net%2Fapi%2Foauth&response_type=code&scope=identify')} 
               className='btn btn-discord'>{window.user ? 'Logged in' : 'Log in to Discord'}</div>
               <div className='actions-subtext disable-selection'>{window.user ? 'Scroll down to see statistics!' : 'or scroll down to see general statistics!'}</div>
             </div>

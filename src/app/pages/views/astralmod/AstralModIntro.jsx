@@ -5,9 +5,13 @@ import './AstralModIntro.scss';
 class AstralModIntro extends Component {
   constructor (props) {
     super(props);
-    setTimeout(() => {
+    this.interval = setTimeout(() => {
       window.routeHandler();
     }, 4000)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.interval)
   }
 
   render () {

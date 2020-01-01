@@ -5,9 +5,13 @@ import './MessagesIntro.scss';
 class MessagesIntro extends Component {
   constructor (props) {
     super(props);
-    setTimeout(() => {
+    this.interval = setTimeout(() => {
       window.routeHandler();
     }, 2000)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.interval)
   }
 
   render () {
