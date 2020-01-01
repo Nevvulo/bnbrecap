@@ -14,8 +14,8 @@ class View extends Component {
       }, 150);
     }
     
-    const next = window.routeHandler({ deltaY: 5 }, true);
-    const prev = window.routeHandler({ deltaY: -5 }, true);
+    const next = false
+    const prev = false
 
     return (
       <GenericTransition>
